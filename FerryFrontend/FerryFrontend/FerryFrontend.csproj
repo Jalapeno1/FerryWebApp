@@ -395,10 +395,25 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions\PersonCapacityException.cs" />
+    <Compile Include="Exceptions\VehicleCapacityException.cs" />
+    <Compile Include="Exceptions\VehicleInvalidException.cs" />
+    <Compile Include="Exceptions\WeightCapacityException.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\ICommonInterface.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Departure.cs" />
+    <Compile Include="Models\Ferry.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Price.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\TicketType.cs" />
+    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
