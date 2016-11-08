@@ -20,6 +20,8 @@ namespace FerryFrontend
 
         protected void CreateFerryButton_Click(object sender, EventArgs e)
         {
+            createferrymessage.InnerText = "";
+
             if (ferryname.Value.Trim().Equals(""))
                 return;
             if (!IsInteger(peoplecapacity.Value))

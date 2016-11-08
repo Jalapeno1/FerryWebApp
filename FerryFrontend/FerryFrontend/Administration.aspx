@@ -2,8 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-    <h3>Your application description page.</h3>
-    <p>Use this area to provide additional information.</p>
+    <h3>Create Ferry</h3>
+    <p>Create a new ferry in the system, which departures can make use of.</p>
 
 
     Ferry Name: <input type="text" id="ferryname" runat="server" /><br><br>
