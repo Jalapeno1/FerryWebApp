@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using FerryFrontend.Controllers;
+using Toolbox3_Library_Hundige;
 
 namespace FerryFrontend
 {
@@ -16,6 +17,29 @@ namespace FerryFrontend
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            LoadFerries();
+            
+        }
+
+        private void LoadFerries()
+        {
+            //FerriesBulletedList.Items.Clear();
+            //var ferries = Controller.GetReserveFerries(9999, 9999, 9999999);
+
+            //foreach (var ferry in ferries)
+            //{
+            //    FerriesBulletedList.Items.Add(ferry.ToString());
+            //}
+
+
+            //ferryList.Items.Clear();
+
+            //var templist = Controller.GetReserveFerries(9999, 9999, 9999999);
+
+            //foreach (var ferry in templist)
+            //{
+            //    ferryList.Items.Add(ferry);
+            //}
         }
 
         protected void CreateFerryButton_Click(object sender, EventArgs e)
@@ -35,12 +59,19 @@ namespace FerryFrontend
                 Convert.ToInt32(vehiclecapacity.Value), Convert.ToInt32(weightcapacity.Value), isreserve.Checked);
 
             createferrymessage.InnerText = res ? "Successfully added!" : "Could not create ferry!";
+
+            LoadFerries();
         }
 
         private bool IsInteger(string input)
         {
             int n;
             return int.TryParse(input, out n);
+        }
+
+        public IEnumerable<Ferry> GetFerries()
+        {
+            return Controller.GetReserveFerries(9999, 9999, 9999999);
         }
     }
 }
