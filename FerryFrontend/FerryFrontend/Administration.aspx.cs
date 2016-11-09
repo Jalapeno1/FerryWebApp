@@ -49,5 +49,10 @@ namespace FerryFrontend
         {
             return Controller.GetReserveFerries(9999, 9999, 9999999);
         }
+
+        protected void DeleteButton_OnCommand(object sender, CommandEventArgs e)
+        {
+            
+        }
     }
 }

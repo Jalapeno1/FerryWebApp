@@ -63,6 +63,7 @@
                         <LayoutTemplate>
                             <table runat="server" class="table table-hover" id="groupPlaceholderContainer">
                                 <tr runat="server">
+                                    <th runat="server">#</th>
                                     <th runat="server">Ferry Name</th>
                                     <th runat="server">Capacity (People)</th>
                                     <th runat="server">Capacity (Vehicles)</th>
@@ -73,6 +74,9 @@
                     
                         </LayoutTemplate>
                         <ItemTemplate>
+                            <td>
+                                <asp:Button ID="DeleteButton" runat="server" OnCommand="DeleteButton_OnCommand" Text="Delete" />          
+                            </td>
                             <td runat="server">
                                 <%#: Item.Name%>
                             </td>
