@@ -116,7 +116,7 @@
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="Toolbox3_Library_Hundige, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Hundige.FerryCase.1.2.0\lib\net452\Toolbox3_Library_Hundige.dll</HintPath>
+      <HintPath>..\packages\Hundige.FerryCase.1.2.5\lib\net452\Toolbox3_Library_Hundige.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease">
