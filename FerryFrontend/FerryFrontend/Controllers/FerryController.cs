@@ -29,11 +29,11 @@ namespace FerryFrontend.Controllers
             return new List<Departure>()
             {
                 new Departure(
-                        new Ferry("large ferry", 150, 70, 20000, true), DateTime.Now),
+                        new Ferry("large ferry", 150, 70, 20000, true), new DateTime(2017, 12, 25, 15, 50, 0)),
                 new Departure(
-                        new Ferry("medium ferry", 120, 40, 15000, true), DateTime.Now),
+                        new Ferry("medium ferry", 120, 40, 15000, true), new DateTime(2017, 02, 14, 10, 30, 0)),
                 new Departure(
-                        new Ferry("small ferry", 80, 0, 10000, true), DateTime.Now)
+                        new Ferry("small ferry", 80, 0, 10000, true), new DateTime(2017, 04, 24, 05, 55, 0))
             };
         }
 
