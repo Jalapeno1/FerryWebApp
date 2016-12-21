@@ -107,6 +107,69 @@
                         <label id="Label2" runat="server"></label>
                     </div>
                 </div>   
+            </div>
+            <div class="col-lg-7">
+                <div class="panel panel-default">
+                  <!-- Default panel contents -->
+                  <div class="panel-heading">Departures</div>
+                  <div class="panel-body">
+                    <p>Available departures</p>
+                      <br/>
+                  </div>
+
+                      <asp:ListView ID="ListViewDepartures" runat="server" 
+                            ItemType="Toolbox3_Library_Hundige.Departure" SelectMethod="GetDepartures">
+                        <EmptyDataTemplate>
+                            <table >
+                                <tr>
+                                    <td>No data was returned.</td>
+                                </tr>
+                            </table>
+                        </EmptyDataTemplate>
+                        <EmptyItemTemplate>
+                            <td/>
+                        </EmptyItemTemplate>
+                        <GroupTemplate>
+                            <tr id="itemPlaceholderContainer" runat="server">
+                                <td id="itemPlaceholder" runat="server"></td>
+                            </tr>
+                        </GroupTemplate>
+                        <LayoutTemplate>
+                            <table runat="server" class="table table-hover" id="groupPlaceholderContainer">
+                                <tr runat="server">
+                                    <th runat="server">#</th>
+                                    <th runat="server">Date</th>
+                                    <th runat="server">Ferry Name</th>
+                                    <th runat="server">Capacity (People)</th>
+                                    <th runat="server">Capacity (Vehicles)</th>
+                                    <th runat="server">Capacity (Weight in kg)</th>
+                                </tr>
+                                <tr id="groupPlaceholder"></tr>
+                            </table>
+                    
+                        </LayoutTemplate>
+                        <ItemTemplate>
+                            <td>
+                                <asp:Button ID="DeleteButtonDeparture" runat="server" Text="Delete" />          
+                            </td>
+                            <td runat="server">
+                                <%#: Item.DateAndTime%>
+                            </td>
+                            <td runat="server">
+                                <%#: Item.SailingFerry.Name%>
+                            </td>
+                            <td runat="server">
+                                <%#: Item.SailingFerry.PeopleCapacity%>
+                            </td>
+                            <td runat="server">
+                                <%#: Item.SailingFerry.VehicleCapacity%>
+                            </td>
+                            <td runat="server">
+                                <%#: Item.SailingFerry.WeightCapacityInKg%>
+                            </td>
+                        </ItemTemplate>
+                    </asp:ListView>
+                </div>
             </div>   
         </div>
     </div>

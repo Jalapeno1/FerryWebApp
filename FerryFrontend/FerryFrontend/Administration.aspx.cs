@@ -16,14 +16,21 @@ namespace FerryFrontend
     {
         private static readonly FerryController Controller = new FerryController();
         public IEnumerable<Ferry> Ferries;
+        public IEnumerable<Departure> Departures;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            InitData();
+            
+        }
+
+        private void InitData()
+        {
             Ferries = Controller.GetAllFerries();
+            Departures = Controller.GetAllDepartures();
 
             foreach (var ferry in Ferries)
                 selectedFerry.Items.Add(ferry.Name);
-            
         }
 
         protected void CreateFerryButton_Click(object sender, EventArgs e)
@@ -54,6 +61,11 @@ namespace FerryFrontend
         public IEnumerable<Ferry> GetFerries()
         {
             return Ferries;
+        }
+
+        public IEnumerable<Departure> GetDepartures()
+        {
+            return Departures;
         }
 
         protected void DeleteButton_OnCommand(object sender, CommandEventArgs e)
