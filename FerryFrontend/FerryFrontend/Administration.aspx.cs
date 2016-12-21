@@ -52,7 +52,12 @@ namespace FerryFrontend
 
         protected void DeleteButton_OnCommand(object sender, CommandEventArgs e)
         {
-            Console.WriteLine(e);
+            //Get the button that raised the event
+            Button btn = (Button)sender;
+
+            //Get the row that contains this button
+            ListViewItem gvr = (ListViewItem)btn.NamingContainer;
+            Console.Write("RowIndex = " + gvr);
         }
     }
 }
