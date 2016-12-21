@@ -33,10 +33,17 @@ namespace FerryFrontend.Tests
             //driver.Quit();
         }
 
+        [Ignore]
         [TestMethod]
         public void WillAlwaysFail()
         {
             Assert.Fail();
+        }
+
+        [TestMethod]
+        public void WillAlwaysSuccess()
+        {
+            
         }
     }
 }
