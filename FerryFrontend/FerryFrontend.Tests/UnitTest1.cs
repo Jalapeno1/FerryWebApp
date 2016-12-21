@@ -37,6 +37,7 @@ namespace FerryFrontend.Tests
         public void WillAlwaysFail()
         {
             Assert.Fail();
+            //Not working..
         }
     }
 }
