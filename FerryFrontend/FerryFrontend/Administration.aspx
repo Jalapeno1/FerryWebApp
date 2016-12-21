@@ -1,9 +1,7 @@
-﻿<%@ Page Title="Administration" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Administration.aspx.cs" Inherits="FerryFrontend.Administration" %>
+﻿<%@ Page Title="Administration" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" 
+    CodeBehind="Administration.aspx.cs" Inherits="FerryFrontend.Administration" %>
 
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
-    
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">    
     <div class="page-header">
         <h2><%: Title %></h2>
     </div>
@@ -93,6 +91,23 @@
                     </asp:ListView>
                 </div>
             </div>
+            <div class="col-lg-5"> 
+                <div class="panel panel-default">
+                    <div class="panel-heading">Create Departure</div>
+                    <div class="panel-body">
+                        <p>Create a new departure in the system, that reservations can make use of.</p><br/><br/>
+
+                        Ferry: <select id="selectedFerry" runat="server">
+                        </select><br><br>
+    
+                        Date: <input type="datetime-local" id="createDepatureDate"  runat="server" /> 
+    
+                        <asp:Button Text="Submit" ID="Button2" OnClick="CreateDeparture_OnClick" runat="server"/><br><br>
+    
+                        <label id="Label2" runat="server"></label>
+                    </div>
+                </div>   
+            </div>   
         </div>
     </div>
 </asp:Content>
