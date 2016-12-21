@@ -32,5 +32,11 @@ namespace FerryFrontend.Tests
             driver.FindElement(By.LinkText("Order Tickets »")).Click();
             driver.Quit();
         }
+
+        [TestMethod]
+        public void WillAlwaysFail()
+        {
+            Assert.Fail();
+        }
     }
 }

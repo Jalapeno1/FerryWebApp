@@ -52,7 +52,7 @@ namespace FerryFrontend
 
         protected void DeleteButton_OnCommand(object sender, CommandEventArgs e)
         {
-            
+            Console.WriteLine(e);
         }
     }
 }
